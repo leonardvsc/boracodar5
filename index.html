@@ -15,38 +15,39 @@
 <body>
   <div id="calculator">
     <div id="display">
-      <div id="last-calc">1 + 1</div>
+      <div id="last-calc"></div>
       <div id="result">
         <img src="./assets/result.svg" alt="Sinal de igual">
-        <span>2</span>
+        <span id="result-calc">0</span>
       </div>
     </div>
     <div id="keyboard">
-      <button class="secondary">CE</button>
-      <button>C</button>
-      <button><img src="./assets/percent.svg" alt="Percent"></button>
-      <button class="tertiary"><img src="./assets/devide.svg" alt="Sinal de divisao"></button>
+      <button class="button cancel-entry secondary" onclick="clean()">CE</button>
+      <button class="button" onclick="cancelEntry()">C</button>
+      <button class="button"><img src="./assets/percent.svg" alt="Percent"></button>
+      <button class="button tertiary operator"  onclick="insert('÷')"><img src="./assets/devide.svg" alt="Sinal de divisao"></button>
 
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="tertiary"><img src="./assets/x.svg" alt="Minus"></button>
+      <button class="button" onclick="insert('7')">7</button>
+      <button class="button" onclick="insert('8')">8</button>
+      <button class="button" onclick="insert('9')">9</button>
+      <button class="button tertiary operator" onclick="insert('x')"><img src="./assets/x.svg" alt="Minus"></button>
 
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button class="tertiary"><img src="./assets/minus.svg" alt="Plus"></button>
+      <button class="button" onclick="insert('4')">4</button>
+      <button class="button" onclick="insert('5')">5</button>
+      <button class="button" onclick="insert('6')">6</button>
+      <button class="button tertiary operator" onclick="insert('-')"><img src="./assets/minus.svg" alt="Plus"></button>
 
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="tertiary"><img src="./assets/plus.svg" alt="PlusMinus"></button>
+      <button class="button" onclick="insert('1')">1</button>
+      <button class="button" onclick="insert('2')">2</button>
+      <button class="button" onclick="insert('3')">3</button>
+      <button class="button tertiary operator" onclick="insert('+')"><img src="./assets/plus.svg" alt="PlusMinus"></button>
 
-      <button><img src="./assets/plusminus.svg" alt=""></button>
-      <button>0</button>
-      <button>,</button>
-      <button class="quartiary"><img src="./assets/equals.svg" alt="Equals"></button>
+      <button class="button"><img src="./assets/plusminus.svg" alt="+/-"></button>
+      <button class="button" onclick="insert('0')">0</button>
+      <button class="button" onclick="insert(',')">,</button>
+      <button class="button quartiary equals-result" onclick="calculate()"><img src="./assets/equals.svg" alt="Equals"></button>
     </div>
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>

@@ -22,6 +22,7 @@ body * {
 }
 
 #display{
+  height: 86px;
   margin-top: 54px;
 
   padding-inline: 54px;
@@ -29,6 +30,7 @@ body * {
 }
 
 #last-calc{
+  height: 28px;
   text-align: right;
   font-size: 20px;
   line-height: 140%;
@@ -36,9 +38,15 @@ body * {
 }
 
 #result{
+  height: 50px;
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
+}
+
+#result img {
+  width: 24px;
+
 }
 
 #result span {
